@@ -1,4 +1,4 @@
-# Task 1 – User and Group Management
+# Task 2 – Linux Permissions
 
 ## Objective
 
