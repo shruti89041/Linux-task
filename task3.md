@@ -89,7 +89,20 @@ sleep 300 &
 A new Process ID (PID) is assigned.
 
 ---
+### 6. SIGTERM: It requests a process to terminate gracefully.
+Allows the process to save data, close files, and release system resources before exiting.
+-
+-SIGKILL (Signal 9): kill -9 <PID>
 
+Explanation:
+
+SIGKILL forcefully terminates a process.
+-
+Difference Between kill and pkill
+kill	pkill
+Uses the Process ID (PID) to terminate a process.	Uses the process name or matching criteria to terminate process(es).
+Requires the PID.	Does not require the PID.
+Can terminate one or more specified PIDs.	Can terminate multiple matching processes simultaneosly.
 
 
 
