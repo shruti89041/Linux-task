@@ -100,9 +100,9 @@ SIGKILL forcefully terminates a process.
 -
 Difference Between kill and pkill
 kill	pkill
-Uses the Process ID (PID) to terminate a process.	Uses the process name or matching criteria to terminate process(es).
-Requires the PID.	Does not require the PID.
-Can terminate one or more specified PIDs.	Can terminate multiple matching processes simultaneosly.
+Uses the Process ID (PID) to terminate a process.	Pkill Uses the process name or matching criteria to terminate process(es).
+Kill Requires the PID.	Pkill Does not require the PID.
+
 
 
 
