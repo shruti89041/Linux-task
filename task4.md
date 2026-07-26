@@ -1,8 +1,17 @@
-# Task 3 – Process Management
+# Task 4 – Disk Usage Investigation
+
 
 ## Objective
 
-Disk Usage Investigation
+Objective
+Analyze storage usage.
+Create files totaling at least 1 GB and perform the following:
+Find the top 10 largest files.
+Find the top 5 largest directories.
+Find files modified within the last 24 hours.
+Find files owned by root.
+Generate a short storage report.
+
 
 ---
 
