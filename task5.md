@@ -1,91 +1,84 @@
-# Task 1 – User and Group Management
+# Task 1 – Linux Log Analysis
 
 ## Objective
 
-Perform user and group administration using Linux commands by creating users and groups, managing memberships, configuring password policies, and verifying the configurations.
+Understand Linux logging.
+Investigate:
+Failed login attempts
+System boot history
+SSH login history
+Last shutdown
+Failed services
+Explain:
+Where Linux stores logs
+Which commands were used
+Why those commands were appropriate
+
 
 ---
 
 ## Commands Used
 
-### 1. Create a User
+### 1. View Failed Login Attempts
 
 ```bash
-sudo useradd -m devopsintern
+sudo lastb
 ```
 
 **Explanation:**
 
-- `useradd` creates a new user account.
-- `-m` creates a home directory for the user (`/home/devopsintern`).
+- lastb displays failed login attempts recorded on the system
 
 ---
 
-### 2. Create a Group
+### 2. View System Boot History
 
 ```bash
-sudo groupadd developers
+last reboot
 ```
 
 **Explanation:**
 
-- `groupadd` creates a new Linux group named **developers**.
+- last displays the login and reboot history.
+- reboot filters the output to show only system boot events.
 
 ---
 
-### 3. Add the User to the Group
+### 3. View SSH Login History
 
 ```bash
-sudo usermod -aG developers devopsintern
+last
 ```
 
 **Explanation:**
 
-- `usermod` modifies an existing user.
-- `-a` appends the user to the supplementary group.
-- `-G` specifies the supplementary group.
-- This command adds **devopsintern** to the **developers** group without removing existing group memberships.
-
+- last displays recent user login history.
 ---
 
-### 4. Set a Password for the User
+### 4. View Last Shutdown Information
 
 ```bash
-sudo passwd devopsintern
+last -x | grep shutdown
 ```
 
 **Explanation:**
 
-- Assigns or changes the password for the user.
-- Required before the user can log in.
+- last -x displays system shutdown and run-level changes.
+- grep shutdown filters the output to display only shutdown events.
 
 ---
 
-### 5. Configure Password Expiry
+### 5. View Failed Services
 
 ```bash
-sudo chage --maxdays 30 devopsintern
+systemctl --failed
 ```
 
-**Explanation:**
+### 6. Where Linux Stores Logs
 
-- `chage` changes password aging information.
-- `--maxdays 30` sets the maximum password validity to **30 days**.
-
----
-
-### 6. Force Password Change on First Login
-
-```bash
-sudo chage -d 0 devopsintern
-```
-
-**Explanation:**
-
-- `-d 0` sets the last password change date to **0**.
-- The user is required to change the password during the first login.
-
----
-
-
+- /var/log/syslog	: General system logs (Ubuntu/Debian).
+- /var/log/messages	: General system logs (RHEL/CentOS).
+- /var/log/auth.log :	Authentication and SSH login logs (Ubuntu/Debian).
+- /var/log/secure : 	Authentication logs (RHEL/CentOS).
+- /var/log/wtmp	: Login and logout history.
 
