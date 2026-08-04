@@ -2,15 +2,10 @@
 
 ## Objective
 
-The objective of this task is to understand Linux package management by installing, verifying, and removing software packages using the `apt` package manager. This task also explains the differences between `apt`, `dpkg`, and `snap`, and identifies when each package manager should be used.
+Understand Linux package management.
+
 
 ---
-
-## Prerequisites
-
-* Ubuntu/Debian-based Linux system
-* User account with `sudo` privileges
-* Internet connection
 
 ---
 
@@ -120,20 +115,4 @@ If the packages have been removed successfully, the terminal will display a **"c
 
 ---
 
-## Expected Outcome
-
-After completing this task, you should be able to:
-
-* Update package repositories.
-* Install software packages using `apt`.
-* Verify successful package installation.
-* Remove packages and their configuration files.
-* Clean unused dependencies.
-* Understand the differences between `apt`, `dpkg`, and `snap`.
-* Choose the appropriate package manager based on the installation scenario.
-
----
-
-## Conclusion
-
-This task provides practical experience with Linux package management by demonstrating the complete lifecycle of software installation, verification, removal, and cleanup. It also highlights the roles of `apt`, `dpkg`, and `snap` in managing software on Linux systems.
+eanup. It also highlights the roles of `apt`, `dpkg`, and `snap` in managing software on Linux systems.
